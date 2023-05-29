@@ -37,7 +37,7 @@ class TestAdicionarProduto(unittest.TestCase):
         
         # Preenchendo as informações do produto
         produto = {
-            'nome': 'Produto Teste',
+            'nome': 'Produto Teste 1',
             'preco': 10.99,
             'descricao': 'Descrição do produto teste'
         }
@@ -47,24 +47,6 @@ class TestAdicionarProduto(unittest.TestCase):
         
         # Verificando se a mensagem de erro é exibida
         self.assertEqual(resultado, 'Produto já cadastrado')
-
-# Função fictícia para registrar o produto
-def registrar_produto(produto):
-    if not produto:
-        return 'Informações insuficientes'
-    elif produto_ja_cadastrado(produto):
-        return 'Produto já cadastrado'
-    else:
-        return 'Produto cadastrado'
-
-# Função fictícia para verificar se o produto já está cadastrado
-def produto_ja_cadastrado(produto):
-    # Implementação fictícia
-    produtos_cadastrados = ['Produto1', 'Produto2', 'Produto3']
-    if produto['nome'] in produtos_cadastrados:
-        return True
-    else:
-        return False
 
 if __name__ == '__main__':
     unittest.main()
